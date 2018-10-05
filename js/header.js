@@ -1,7 +1,7 @@
 (function(){
 
     var nav_cart = document.getElementById('nav-cart');
-    if(nav_cart){
+    if(nav_cart){ // 个人中心
         var nav_cart_wrapper = document.querySelector('#nav-cart > .nav-cart-wrapper');
         
         nav_cart.addEventListener("mouseenter", function(){
