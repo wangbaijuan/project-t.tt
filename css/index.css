@@ -1,0 +1,67 @@
+
+/*主体样式*/
+/*主体 - 轮播*/
+main #banner {
+    height: 500px;
+    background-color: #0aa1ed;
+}
+/*主体-官方配件 */
+main .container .peijian .category .item{
+    width: 25%;
+    height: 429px;
+    background-color: #0aa1ed;
+    border: 1px solid rgba(0, 0, 0, .1);
+    margin-top: 60px;
+}
+/*主体-热卖商品 */
+main .container .remen .title{
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    margin-bottom: 0;
+}
+main .container .remen .category .item{
+    width: 25%;
+    height: 429px;
+    background-color: #0aa1ed;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+/*主体- 新品首发-home-box*/
+main .container .home-box {
+    margin-top: 25px;
+}
+ .home-box .title {
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    margin-bottom: 0;
+}
+
+.home-box .category .item {
+    width: 25%;
+    height: 429px;
+    background-color: #0aa1ed;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+.home-box .category .item.item-recom{
+    width: 50%;
+}
+.home-box .category ul .item:hover {
+    box-shadow: inset 0 0 38px rgba(0, 0, 0, .1);
+    transition: all .01s linear;
+}
+.home-box .category .item-img {
+    width: 100%;
+    height: 281px;
+}
+.home-box .category .price {
+    margin-top: 34px;
+}
+/*底部- */
+/*主体- */
+/*主体- */
+/*主体- */
+/*主体- */
+/*主体- */

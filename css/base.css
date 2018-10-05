@@ -1,0 +1,47 @@
+/*全局基础样式*/
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html, body,header,main,footer, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    color: #333;
+    height: 100%;
+    font-family: "Myriad Set Pro", "Helvetica Neue",
+}
+body {
+    background-color: #fafafa;
+    color: #666;
+    font: .5rem Arial,Verdana, "microsoft yahei" ;
+    min-width: 1500px !important;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font:inherit;
+    color: inherit;
+    outline: none;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+a:hover {
+    color: #eee;
+    text-decoration: none;
+}
+img {
+    border: 0;
+}
+li {
+    list-style: none;
+}
+body .container {
+    width: 1220px !important;
+}
+main {
+    background-color: #ededed;
+}

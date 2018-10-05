@@ -1,0 +1,335 @@
+/*下导航栏*/
+header .nav-sub {
+    width: 100%;
+    min-width: 1220px !important;
+    background-color: #f9f9f9;
+    height: 38px;
+    background-image: linear-gradient(#f8f8f8,#f5f5f5);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+/* 商品信息 */
+main .product-main .container {
+    padding-top: 50px !important;
+}
+main .product-main {
+    width: 100%;
+    height: 966px;
+    border-bottom: 1px solid #e8e8e8;
+}
+main .product-main .product-view {
+    width: 610px;
+    height: 500px;
+}
+main .product-main .product-view img {
+    width: 500px;
+    height: 500px;
+}
+main .product-main .product-info {
+    width: 610px;
+    height: 910px;
+}
+main .product-main .product-info .product-title {
+    height: 131px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e8e8e8;
+}
+main .product-main .product-info .product-title .product-subtitle {
+    height: 70px;
+    padding-top: 20px;
+    font-size: 14px;
+}
+                   
+main .product-main .product-info .activities {
+    height: 89px;
+    padding: 30px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+.activities .activities-title,
+.product-spec .spec-name,
+.insurance .insurance-title{
+    width: 85px;
+    float: left;
+}
+main .product-main .product-info .product-spec-color {
+    height: 119px;
+    margin-top: 30px;
+}
+.product-spec-color .spec-color {
+    display: flex;
+    flex-wrap: wrap;
+    height: 119px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #e8e8e8;
+}
+.product-spec-color .spec-color li {
+    width: 175px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+.product-spec-color .spec-color .color-box{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    padding: 2px;
+    margin:-10px 10px 0 0;
+    cursor: pointer;
+}
+.product-spec-color .spec-color .color-box img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+main .product-main .product-info .product-spec-memory {
+    height: 82px;
+    margin-top: 30px;
+}
+.product-spec-memory .spec-color {
+    display: flex;
+}
+.product-spec-memory .spec-name {
+    height: 45px;
+    line-height: 45px;
+}
+.product-spec-memory .spec-color li {
+    width: 118px;
+    padding: 0 13px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border: 1px solid #e5e5e5;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.product-spec-memory .spec-color li:hover {
+    box-shadow: 0 0 0 1px #e5e5e5;
+}
+main .product-main .product-info .insurance {
+    height: 435px;
+    padding: 30px 0;
+    border-top: 1px solid #e8e8e8;
+}
+.insurance .insurance-title {
+    height: 72px;
+    line-height: 72px;
+}
+.insurance  .insurance-info {
+    display: flex;
+    flex-direction: column;
+}
+.insurance  .insurance-info li{
+    height: 72px;
+    padding: 10px 20px 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+}
+.insurance  .insurance-info li .icon {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(206, 201, 201);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius:0 7px 0 7px;
+}
+.insurance .insurance-info .insurance-right {
+    font-size: 16px;
+    color: #d44d44;
+}
+.insurance  .insurance-info li.insurance-tips {
+    padding: 0;
+    border: 0;
+    height: 183px;
+}
+.insurance-tips .tips-title {
+    display: block;
+    width: 85px;
+}
+.tips-info {
+    flex: 1;
+    line-height: 1.3rem;
+}
+.tips-info p:first-child {
+    margin-bottom: 20px;
+}
+/* 商品详情 */
+main .product-specs .container {
+    padding-bottom: 50px !important;
+}
+main .product-specs {
+    background-color: #fff;
+    border-bottom: 1px solid #e8e8e8;
+}
+.product-specs .product-title,
+.product-recommend .recommend-title {
+    padding: 60px 0;
+    font-size: 23px;
+    font-weight: bolder;
+}
+.product-detail img{
+    width: 100%;
+}
+/* 商品推荐 */
+main .product-recommend .container {
+    padding-bottom: 50px !important;
+}
+main .product-recommend {
+    background-color: #fff;
+    border-bottom: 1px solid #e8e8e8;
+}
+.recommend-items{
+    width: 100%;
+    height: 878px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.recommend-items .item {
+    width: 297px;
+    height: 429px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.recommend-items .item:hover {
+    box-shadow: 0 0 0 1px #e5e5e5;
+}
+.recommend-items .item .item-img{
+    width: 216px;
+    height: 281px;
+    padding: 40px 0px 20px;
+    margin: 0 auto;
+    position: relative;
+}
+.item .item-img .badge.badge-pill {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+}
+.recommend-items .item h4{
+    height: 16px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+.recommend-items .item h6 {
+    height: 29px;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #999;
+}
+.recommend-items .item .color {
+    width: 14px;
+    height: 14px;
+    margin: 15px auto 0;
+    border: 1px solid #b2b2b2;
+    box-shadow: 0 0 0 1px #b2b2b2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item .color img {
+    width: 10px;
+    height: 10px;
+}
+.recommend-items .item .price {
+    font-size: 18px;
+    color: #d44d44;
+    margin-top: 20px;
+    /* display: none; */
+}
+.item .checkinfo {
+    margin-top: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #646464;
+    background-color: #f9f9f9;
+    background-image: linear-gradient(#fff,#f9f9f9);
+    display: none;
+}
+.recommend-items .item:hover .price {
+    display: none;
+}
+.recommend-items .item:hover .checkinfo {
+    display: inline-block;
+}
+/* 商品结算固定栏 */
+main .product-fix-bar {
+    height: 61px;
+    border-top: 1px solid #e8e8e8;
+    background-color: #fafafa;
+}
+.product-fix-bar .fix-bar {
+    display: flex;
+    justify-content: space-between;
+}
+.fix-bar .choose {
+    display: flex;
+    align-items: center;
+}
+.choose .title {
+    margin-top: -15px;
+}
+.choose .title,
+.choose .goods-chosen {
+    margin-right: 20px;
+}
+.choose .goods-chosen p:first-child,
+.choose .extra p:first-child  {
+    font-weight: bolder;
+}
+.choose .goods-chosen .price {
+    color: #d44d44;
+    margin-left: 10px;
+}
+.choose .extra {
+    margin-left: 20px;
+    position: relative;
+} 
+.choose .extra::before {
+    content: "";
+    width: 1px;
+    height: 32px;
+    background-color: #e1e1e1;
+    position: absolute;
+    left: -20px;
+}
+.choose .extra p:last-child {
+    color: #d44d44;
+}
+.fix-bar .buy {
+    display: flex;
+    align-items: center;
+}
+.buy .price{
+    width: 110px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #d44d44;
+    line-height: 60px;
+}
+.buy .add-cart {
+    width: 122px;
+}
+.buy .btn {
+    width: 110px;
+    height: 40px;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+.buy .buy-now .btn{
+    line-height: 30px;
+}

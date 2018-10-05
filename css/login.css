@@ -1,0 +1,161 @@
+/*登录框样式*/
+body {
+    overflow: hidden;
+}
+main  {
+    width: 452px;
+    height: 552px;
+    margin: 150px auto 150px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 0 0 1px #e8e8e8;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background: linear-gradient(to bottom,#fff 50%, #fafafa 100%);
+    padding: 22px 40px;
+}
+main .logo {
+    height: 167px;
+    margin: 0 0 40px;
+    padding-top: 35px;
+}
+.logo img {
+    border-radius: 50%;
+}
+.logo .title {
+    margin-top: 27px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+}
+/* 登陆 */
+main .login {
+    height: 240px;
+}
+.login .username, .login .password {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.login .uname, .upwd, .button-login{
+    width: 322px;
+    background: #fff;
+    box-shadow: 0 3px 5px -4px rgba(0,0,0,.4) inset, -1px 0 3px -2px rgba(0,0,0,.1) inset;
+    /* border:  1px solid #ccc; */
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-size: 18x;
+    height: 46px;
+    line-height: 46px;
+    /* opacity: .618; */
+    padding: 12px 12px 12px 15px;
+}
+.login .uname, .upwd {
+    border: 0;
+    border-left: 1px solid #ccc;
+}
+.login .icon {
+    width: 46px;
+    height: 46px;
+    background: url(../img/login/v2/input-icons.png) #fafafa no-repeat;
+    float: left;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-right: 1px solid #ccc;
+}
+.login .password .icon  {
+    background: url(../img/login/v2/input-icons.png) #f8f8f8  10% no-repeat;
+}
+.login .remember {
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember .auto-login {
+    position: relative;
+    display: inline-block;
+}
+.auto-login input[type="checkbox"] {
+    width: 100%;/*把label和input绑定*/
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 999;
+}
+.auto-login .fa-check-circle {
+    height: 15px;
+    width: 15px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    color: transparent;
+}
+.auto-login .fa-2x {
+    font-size: 2em;
+}
+.auto-login  .fa-check-circle::before,
+.auto-login input[type="checkbox"]:checked ~ label .fa-check-circle::before {
+    color: #5bc0de;
+    border-color: #5bc0de;
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    transition: all .5s linear;
+}
+.auto-login  .fa-check-circle::before{
+    transition: all .5s linear;
+    border-color: transparent;
+    color: transparent;
+}
+.button-login {
+    width: 100%;
+    margin-top: 30px;
+    background: linear-gradient(#6383c6,#4262af);
+    /* opacity: .4; */
+    /* cursor: not-allowed; */
+    pointer-events: none;
+    color: #fafafa;
+    font-size: 20px;
+    border-radius: 7px;
+    padding: 0;
+}
+/* 其他账号 */
+main .other-account {
+    margin-top: 20px;
+    padding-top: 23px ;
+    border-top: 1px solid #e8e8ee;
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+}
+.other-account .socail-account a .fa {
+    margin-right: 10px;
+}
+.other-account .socail-account a .fa:hover {
+    color: #5bc0de;
+}
+.other-account .socail-account a .fa.fa-weixin:hover {
+    color: #87dd94;
+}
+.other-account .socail-account a .fa.fa-weibo:hover {
+    color: #e52b43;
+}
+.other-account a{
+    color: #999;
+}
+.other-account .national-tel span {
+    margin-left: 5px;
+}
+.other-account .national-tel a:hover {
+    color: #406dd6;
+}
+/*底部样式*/
+footer {
+    text-align: center;
+}
