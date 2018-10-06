@@ -94,6 +94,7 @@
                 </ul>
         </nav>
     </header>
+    
     <main>
         <div class="checkout-page">
             <div class="container">
@@ -105,10 +106,14 @@
                                 <span class="fa fa-thumb-tack"></span>
                             </article>
                             <article class="contact-number">13988888888</article>
-                            <article class="province-city">北京市 市辖区 东城区</article>
+                            <article class="province-city"> 
+                                <span class="province" value='1'>北京市</span> 
+                                <span class="city" value='1-1'>市辖区</span> 
+                                <span class="village" value='6'>东城区</span> 
+                            </article>
                             <article class="address-detail">雍和宫北侧，二环外护城河边雍和家园</article>
                             <div class="operation">
-                                <span class="modify-btn">修改</span>
+                                <span class="modify-btn" data-toggle="modal" data-target="#addr-modal">修改</span>
                                 <span class="delete-btn">删除</span>
                             </div>
                         </li>
@@ -117,10 +122,14 @@
                                 <span class="fa fa-thumb-tack"></span>
                             </article>
                             <article class="contact-number">13988888888</article>
-                            <article class="province-city">北京市 市辖区 东城区</article>
+                            <article class="province-city"> 
+                                <span class="province" value='1'>北京市</span> 
+                                <span class="city" value='1-1'>市辖区</span> 
+                                <span class="village" value='6'>东城区</span> 
+                            </article>
                             <article class="address-detail">雍和宫北侧，二环外护城河边雍和家园</article>
                             <div class="operation">
-                                <span class="modify-btn">修改</span>
+                                <span class="modify-btn" data-toggle="modal" data-target="#addr-modal">修改</span>
                                 <span class="delete-btn">删除</span>
                             </div>
                         </li>
@@ -129,10 +138,14 @@
                                 <span class="fa fa-thumb-tack"></span>
                             </article>
                             <article class="contact-number">13988888888</article>
-                            <article class="province-city">北京市 市辖区 东城区</article>
+                            <article class="province-city"> 
+                                <span class="province" value='1'>北京市</span> 
+                                <span class="city" value='1-1'>市辖区</span> 
+                                <span class="village" value='6'>东城区</span> 
+                            </article>
                             <article class="address-detail">雍和宫北侧，二环外护城河边雍和家园</article>
                             <div class="operation">
-                                <span class="modify-btn">修改</span>
+                                <span class="modify-btn" data-toggle="modal" data-target="#addr-modal">修改</span>
                                 <span class="delete-btn">删除</span>
                             </div>
                         </li>
@@ -141,10 +154,14 @@
                                 <span class="fa fa-thumb-tack"></span>
                             </article>
                             <article class="contact-number">13988888888</article>
-                            <article class="province-city">北京市 市辖区 东城区</article>
+                            <article class="province-city"> 
+                                <span class="province" value='1'>北京市</span> 
+                                <span class="city" value='1-1'>市辖区</span> 
+                                <span class="village" value='6'>东城区</span> 
+                            </article>
                             <article class="address-detail">雍和宫北侧，二环外护城河边雍和家园</article>
                             <div class="operation">
-                                <span class="modify-btn">修改</span>
+                                <span class="modify-btn" data-toggle="modal" data-target="#addr-modal">修改</span>
                                 <span class="delete-btn">删除</span>
                             </div>
                         </li>
@@ -153,10 +170,14 @@
                                 <span class="fa fa-thumb-tack"></span>
                             </article>
                             <article class="contact-number">13988888888</article>
-                            <article class="province-city">北京市 市辖区 东城区</article>
+                            <article class="province-city">
+                                    <span class="province" value='1'>北京市</span> 
+                                    <span class="city" value='1-1'>市辖区</span> 
+                                    <span class="village" value='3'>昌平区</span> 
+                            </article>
                             <article class="address-detail">雍和宫北侧，二环外护城河边雍和家园</article>
                             <div class="operation">
-                                <span class="modify-btn">修改</span>
+                                <span class="modify-btn" data-toggle="modal" data-target="#addr-modal">修改</span>
                                 <span class="delete-btn">删除</span>
                             </div>
                         </li>
@@ -165,14 +186,18 @@
                                 <span class="fa fa-thumb-tack"></span>
                             </article>
                             <article class="contact-number">13988888888</article>
-                            <article class="province-city">北京市 市辖区 东城区</article>
+                            <article class="province-city"> 
+                               <span class="province" value='1'>北京市</span> 
+                               <span class="city" value='1-1'>市辖区</span> 
+                               <span class="village" value='6'>东城区</span> 
+                            </article>
                             <article class="address-detail">雍和宫北侧，二环外护城河边雍和家园</article>
                             <div class="operation">
-                                <span class="modify-btn">修改</span>
+                                <span class="modify-btn" data-toggle="modal" data-target="#addr-modal">修改</span>
                                 <span class="delete-btn">删除</span>
                             </div>
                         </li>
-                        <li class="address-item add-new">
+                        <li class="address-item add-new" data-toggle="modal" data-target="#addr-modal">
                             <span class="fa fa-plus fa-2x"></span>
                             <p>使用新地址</p>
                         </li>
@@ -180,11 +205,27 @@
                 </div>
                 <div class="gray-box agreement-box">
                     <h3 class="title">用户须知</h3>
-                    <div class="box-inner"></div>
+                    <div class="box-inner">
+                        <div class="content">
+                            <p>根据 2017 年 1 月 6 日国家工商行政管理总局令第 90 号公布的《网络购买商品七日无理由退货暂行办法》，手机激活后将不适用七日无理由退货规定。</p>
+                            <div class="agree-radio radio">
+                                <input type="checkbox">
+                                <label>
+                                    <em class="fa fa-check-circle fa-2x"></em>
+                                    我已阅读并同意上述内容
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sub">请您阅读用户须知内容，如果确认同意，请勾选“我已阅读并同意上述内容”</div>
+                    </div>
                 </div>
                 <div class="gray-box cart-box">
                     <h3 class="title">购物清单</h3>
-                    <div class="box-inner"></div>
+                    <div class="box-inner">
+                        <div class="subtitle"></div>
+                        <div class="purchased-goods"></div>
+                        <div class="purchased-goods"></div>
+                    </div>
                 </div>
                 <div class="gray-box invoice-box">
                     <h3 class="title">发票信息</h3>
@@ -203,6 +244,7 @@
             </div>        
         </div>
     </main>
+    
     <footer> 
         <div class="container">
             <div class="row siteinfo">
@@ -274,9 +316,42 @@
                 </div>
                 <div class="col-md-1 text-right lang">中文</div>
             </div> 
-        </div>
-        
+        </div>    
     </footer>
+    <div class="modal fade" id="addr-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content new-address">
+                <div class="topbar">管理收货地址</div>
+                <form class="content">
+                        <input id="name" class="w-100" type="text" placeholder="收货人姓名">
+                        <input id="tel" class="w-100" type="tel" placeholder="手机号">
+                        <select class="w-100" name="Province" id="Province">
+                            <option value="">请选择省份</option>
+                        </select>
+                        <div class=" city d-flex justify-content-between">
+                            <select class="w-50"   name="City" id="City">
+                                <option value="">请选择城市</option>
+                            </select>
+                            <select class="w-50"  name="Village" id="Village">
+                                <option value="">请选择区县</option>
+                            </select>
+                        </div>
+                        <input id="detail" class="w-100" type="text" placeholder="街道编号/名称，楼宇名称">
+                        <div class="default-addr radio">
+                            <input type="checkbox">
+                            <label>
+                                <em class="fa fa-check-circle"></em>
+                                设为默认地址
+                            </label>
+                        </div>
+                </form>
+                <div class="subbar">
+                    <button class="btn p-0 cancel"  data-dismiss="modal">取消</button>
+                    <button class="btn p-0 save" data-dismiss="modal">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

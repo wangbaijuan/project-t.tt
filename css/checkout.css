@@ -43,9 +43,7 @@ main .checkout-page .container {
 }
 /* 地址信息 */
 .address-item .name {
-    /* width: 100%; 宽度会变宽？？？？？？*/
     height: 16px;
-    /* padding-right: 20px; 为什么留？？？？？？？？*/
     font-size: 16px;
     color: #666;
     line-height: 16px;
@@ -79,6 +77,7 @@ main .checkout-page .container {
     left: 0;
     bottom: -28px;
     transition: all .3s linear;
+    cursor: pointer;
 }
 .address-item .operation span{
     width: 50%;
@@ -118,7 +117,34 @@ ul.box-inner .address-item.add-new {
 .gray-box.address-box ul.box-inner .address-item:hover .operation {
     bottom: 0;
 }
+/* 用户须知 */
+.gray-box.agreement-box .box-inner {
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+}
+.box-inner .content {
+    padding: 0 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.box-inner .sub {
+    padding: 0 20px;
+    border-radius: 0 0 8px 8px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    background-color: #d44d44;
+}
 
+/* 购物清单 */
+.gray-box.cart-box .box-inner {
+    height: 259px;
+}
+/* 发票信息 */
+/* 我的优惠 */
 /* 提交订单固定栏 */
 main .checkout-fix-bar {
     height: 61px;
@@ -142,4 +168,83 @@ main .checkout-fix-bar {
     width: 330px;
     height: 39px;
     background-color: #069;
+}
+/* 添加新地址 */
+.new-address {
+    width: 306px;
+    height: 462px;
+    border-radius: 8px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #646464;
+}
+.new-address .topbar {
+    height: 48px;
+    border-radius: 8px 8px 0 0 ;
+    border-bottom: 1px solid #ececec;
+    box-shadow: 0 1px 0 #f2f2f2;
+    background-image: linear-gradient(#fbfbfb, #ececec);
+    padding: 0 15px;
+    text-align: center;
+    line-height: 47px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.new-address .content {
+    height: 366px;
+    padding: 18px;
+    font-size: 15px;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.new-address .content > input,
+ .new-address .content select {
+    padding: 5px 15px;
+    height: 30px;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+}
+/* 复选⚪效果 ---start */
+.default-addr  .fa-check-circle::before,
+.default-addr input[type="checkbox"]:checked ~ label .fa-check-circle::before {
+    color: #369;
+    border-color: #369;
+    top: -3px;
+    left: -1px;
+    font-size: 17px;
+}
+.default-addr  .fa-check-circle::before{
+    transition: all .5s linear;
+    border-color: transparent;
+    color: transparent;
+}
+/*  复选⚪效果 ---end */
+.new-address .subbar {
+    height: 48px;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #ececec;
+    box-shadow: 0 -1px 0 #fafafa;
+    background-image: linear-gradient(#fbfbfb, #ececec);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.new-address .subbar button {
+    font-size: 12px;
+    width: 140px;
+    height: 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background-color: #fbfbfb;
+}
+.new-address .subbar .save {
+    background-color: #069;
+    opacity: .5;
+    color: #fff;
 }

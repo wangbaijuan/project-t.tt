@@ -39,6 +39,9 @@ main .login {
     border-radius: 6px;
     margin-bottom: 20px;
 }
+.login input::-webkit-input-placeholder{
+    color: #ccc;
+}
 .login .uname, .upwd, .button-login{
     width: 322px;
     background: #fff;
@@ -73,46 +76,7 @@ main .login {
     display: flex;
     justify-content: space-between;
 }
-.remember .auto-login {
-    position: relative;
-    display: inline-block;
-}
-.auto-login input[type="checkbox"] {
-    width: 100%;/*把label和input绑定*/
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    z-index: 999;
-}
-.auto-login .fa-check-circle {
-    height: 15px;
-    width: 15px;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    vertical-align: bottom;
-    position: relative;
-    top: -1px;
-    color: transparent;
-}
-.auto-login .fa-2x {
-    font-size: 2em;
-}
-.auto-login  .fa-check-circle::before,
-.auto-login input[type="checkbox"]:checked ~ label .fa-check-circle::before {
-    color: #5bc0de;
-    border-color: #5bc0de;
-    position: absolute;
-    top: -2px;
-    left: -1px;
-    transition: all .5s linear;
-}
-.auto-login  .fa-check-circle::before{
-    transition: all .5s linear;
-    border-color: transparent;
-    color: transparent;
-}
+
 .button-login {
     width: 100%;
     margin-top: 30px;
