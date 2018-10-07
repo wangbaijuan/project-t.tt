@@ -23,6 +23,32 @@ $('#addr-modal').on('show.bs.modal', function (e) {
 })
 
 
+$(".personal").on("click", function(){
+    document.querySelector(".invoice-box .box-inner .corporation-form").style.display = "none";
+})
+$(".corporation").on("click", function(){
+    document.querySelector(".invoice-box .box-inner .corporation-form").style.display = "block";
+})
+
+// 提交订单
+document.querySelector(".payment-blue-btn").addEventListener("click", function(){
+    $(".pay-success-box").removeClass("d-none").siblings().addClass("d-none");
+    $(".checkout-fix-bar").addClass("d-none");
+})
+// 支付方式
+$(".payment-info .tag-list .tag-item ").on("click", function(){
+    $(this).addClass("select-tag").siblings().removeClass("select-tag");
+    let theTarget ="."+$(this).data("type");
+    $(theTarget).removeClass("d-none").siblings().addClass("d-none");
+})
+// 分期方式
+$(".instalment-pay-container .common-pay li").on("click", function(){
+    $(this).addClass("select-pay").siblings().removeClass("select-pay");
+    let theTarget =".instalment-panel > ."+$(this).data("instal");
+    $(theTarget).removeClass("d-none").siblings().addClass("d-none");
+})
+
+
 $(function(){
     ProvinceBind();
     $("#Province").change(function(){
@@ -33,6 +59,7 @@ $(function(){
         VillageBind();
     })
 })
+
 
 function ProvinceBind(){
     $("#Province").html("");

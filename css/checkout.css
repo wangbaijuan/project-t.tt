@@ -7,6 +7,7 @@ main .checkout-page .container {
     background-color: #ffffff;
     border: 1px solid #dcdcdc;
     border-radius: 8px;
+    font-size: 14px;
 }
 .checkout-page .gray-box .title {
     height: 51px;
@@ -22,7 +23,6 @@ main .checkout-page .container {
     padding: 30px 30px 15px;
     display: flex;
     flex-wrap: wrap;
-    font-size: 14px;
     color: #999;
 }
 /* 每个地址栏样式 */
@@ -123,14 +123,17 @@ ul.box-inner .address-item.add-new {
     display: flex;
     flex-direction: column;
 }
-.box-inner .content {
+.agreement-box .box-inner .content {
     padding: 0 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-.box-inner .sub {
+.agreement-box .box-inner .content .agree-radio .fa-check-circle::before{
+    font-size: 16px;
+}
+.agreement-box .box-inner .sub {
     padding: 0 20px;
     border-radius: 0 0 8px 8px;
     height: 50px;
@@ -140,11 +143,354 @@ ul.box-inner .address-item.add-new {
 }
 
 /* 购物清单 */
-.gray-box.cart-box .box-inner {
-    height: 259px;
+
+.cart-box .box-inner .subtitle {
+    height: 39px;
+    line-height: 39px;
+    background-color: #eee;
+    padding: 0 20px;
+    display: flex;
+    font-size: 12px;
 }
+.cart-box .box-inner ul li:first-child {
+    flex: 1;
+}
+.cart-box .box-inner ul li:not(:first-child){
+    width: 137px;
+    text-align: end;
+}
+.cart-box .box-inner .purchased-goods {
+    padding: 0 20px;
+    height: 110px;
+    display: flex;
+    line-height: 110px;
+}
+.cart-box .purchased-goods li:first-child {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.cart-box .purchased-goods li:first-child img {
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 5px;
+}
+.cart-box .purchased-goods li:first-child .goods-info {
+    line-height: normal;
+    margin-left: 20px;
+}
+.cart-box .purchased-goods li:first-child .goods-info .gift-name {
+    color: #d44d44;
+}
+.cart-box .purchased-goods li:first-child .goods-info .gift-info {
+    padding-top: 10px;
+    color: #999;
+    font-size: 12px;
+}
+.cart-box .purchased-goods li:not(:first-child){
+    font-weight: 700;
+}
+
 /* 发票信息 */
+.gray-box.invoice-box .box-inner {
+    padding: 22px 30px 28px;
+    color: #666;
+}
+.invoice-box .box-inner p {
+    height: 36px;
+    line-height: 36px;
+}
+.invoice-box .box-inner p.radio-box label input{
+    display: none;
+}
+.invoice-box .box-inner p.radio-box label span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e5e5e5;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin:0 10px;
+    position: relative;
+}
+.invoice-box .box-inner p.radio-box label input:checked + span {
+    border: 2px solid #00A1E9;
+}
+.invoice-box .box-inner p.radio-box label input:checked + span::after {
+    display: inline-block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #00A1E9;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+.invoice-box .box-inner p.invoice-label {
+    height: 38px;
+    padding-top: 13px;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 11px;
+    font-size: 12px;
+}
+.invoice-box .box-inner form.corporation-form {
+    padding: 10px 0 0 70px;
+    display: none;
+}
+.invoice-box .box-inner form.corporation-form p {
+    margin-bottom: 10px;
+}
+.invoice-box .box-inner form.corporation-form input {
+    width: 340px;
+    height: 36px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 0 15px;
+}
+
+
 /* 我的优惠 */
+.gray-box.coupon-box .box-inner {
+    height: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.coupon-box .box-inner .none-coupon img {
+    width: 72px;
+    height: 52px;
+}
+.coupon-box .box-inner .none-coupon p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #d9d9d9;
+}
+/* 支付订单 */
+.gray-box.pay-success-box .title {
+    height: 61px;
+    line-height: 60px;
+    font-weight: normal;
+}
+
+.gray-box.pay-success-box .box-inner .order-info {
+    padding: 60px 0 55px;
+    text-align: center;
+    color: #999;
+}
+.gray-box.pay-success-box .box-inner .order-info .order-title {
+    font-size: 36px;
+    color: #212121;
+}
+.gray-box.pay-success-box .box-inner .order-info .time-15m {
+    color: #d44d44;
+    font-weight: 700;
+}
+.gray-box.pay-success-box .box-inner .payment-info {
+    padding:0 30px 30px;
+}
+.gray-box.pay-success-box .box-inner .payment-info .tag-list {
+    display: flex;
+    text-align: center;
+    border-left: 1px solid #e5e5e5;
+    border-right: 6px;
+    border-radius: 6px 0 0 0;
+}
+.payment-info .tag-list .tag-item {
+    width: 153px;
+    height: 43px;
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-left-width: 0;
+    border-radius: 6px 6px 0 0 ;
+    line-height: 41px;
+    color: #9f9f9f;
+    cursor: pointer;
+    user-select: none;
+}
+.payment-info .tag-list .tag-item.select-tag {
+    font-weight: 700;
+    color: #626262;
+    background-color: #fff;
+    border-bottom: 0;
+}
+.gray-box.pay-success-box .box-inner .payment-info .payment-platform {
+    border: 1px solid #e5e5e5;
+    border-radius: 0 6px 6px 6px;
+    padding: 0 28px;
+    margin-top: -1px;
+}
+.payment-platform  ul.common-pay {
+    padding: 8px 0 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    border-bottom: 1px dashed #e5e5e5;
+}
+.payment-platform  ul.common-pay li {
+    width: 175px;
+    height: 50px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:20px 10px 0 0;
+    text-align: center;
+    line-height: 48px;
+    background-color: #fafafa;
+}
+.payment-platform  ul.common-pay li.select-pay {
+    border-color: #00A1E9;
+    background-color: #fff;
+}
+.payment-platform  ul.common-pay li img {
+    width: 144px;
+    height: 34px;
+}
+/* 在线支付 */
+.payment-platform .onLine-pay-container ul.common-pay:last-child {
+    border-bottom: none;
+    justify-content: space-between;
+}
+.payment-platform .onLine-pay-container ul.common-pay:last-child li {
+    margin-right: 0;
+}
+/* 分期付款 */
+.payment-platform .instalment-pay-container > ul.common-pay {
+    border-bottom: none;
+}
+/* 花呗分期 */
+.payment-platform .instalment-pay-container .instalment-panel {
+    margin: 0 0 28px;
+}
+.payment-platform .instalment-pay-container .instalment-panel aside{
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    display: flex;
+    padding: 28px;
+    position: relative;
+}
+/* 小三角 */
+.payment-platform .instalment-pay-container .instalment-panel aside::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border:1px solid transparent;
+    border-top: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    transform: rotate(-45deg);
+    background-color: #fff;
+    top: -10px;
+    left: 84px;
+}
+
+.instalment-panel aside .installment-list {
+    flex: 1;
+    /* padding: 0 43px 0 20px; */
+}
+.instalment-panel aside .installment-list li{
+    height: 81px;
+    line-height: 80px;
+}
+.installment-list .installment-item span {
+    display: inline-block;
+    height: 81px;
+    border-top: 1px dashed #e5e5e5;
+}
+.instalment-panel aside .installment-list li:first-child span{
+    border: none;
+}
+.installment-list .installment-item input{
+    display: none;
+}
+.installment-list .installment-item em {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e5e5e5;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin:0 10px;
+    position: relative;
+    background-color: #fafafa;
+}
+.installment-list .installment-item input:checked + em::after {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #369;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+.installment-list .installment-item input:checked ~ span {
+    font-weight: 700;
+}
+
+.instalment-panel aside .installment-intro {
+    width: 478px;
+    height: 186px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #e5e5e5;
+    margin-top: 31px;
+}
+.instalment-panel aside .installment-intro img {
+    width: 435px;
+    height: 186px;
+}
+/* 白条分期 */
+.payment-platform .instalment-pay-container .instalment-panel aside.jd-baitiao::before {
+    left: 262px;
+}
+.instalment-panel aside.jd-baitiao .installment-intro {
+   display: block;
+   padding-left: 30px;
+}
+.instalment-panel aside.jd-baitiao .installment-intro h6 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+/* 招商分期 */
+.payment-platform .instalment-pay-container .instalment-panel aside.cmb::before {
+    left: 448px;
+}
+.instalment-panel aside.cmb .installment-intro {
+    display: block;
+    padding-left: 30px;
+    height: 350px;    /*投机取巧*/
+}
+.instalment-panel aside.cmb .installment-intro h6 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.gray-box.pay-success-box .checkout-info {
+    height: 61px;
+    padding: 10px;
+    border-top: 1px solid #d4d4d4;
+    border-radius: 0 0  8px 8px;
+    background: linear-gradient(#fbfbfb, #ececec);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.gray-box.pay-success-box .checkout-info .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #d44d44;
+    margin-left: 10px;
+}
+.gray-box.pay-success-box .checkout-info .pay-me-now {
+    color: #fff;
+    background-color: #dd4444;
+    margin-left: 10px;
+    width: 122px;
+}
+
 /* 提交订单固定栏 */
 main .checkout-fix-bar {
     height: 61px;
@@ -162,13 +508,48 @@ main .checkout-fix-bar {
 .fix-bar .detail-box {
     width: 535.11px;
     height: 39px;
-    background-color: #369;
+    display: flex;
+    color: #7d7d7d;
 }
+.fix-bar .detail-box .item-box {
+    padding: 0 30px;
+    border-left: 1px solid #ececec;
+}
+.fix-bar .detail-box .item-box.count {
+    padding-left: 0;
+    border-left: none;
+}
+.fix-bar .detail-box .item-box .head {
+    margin-bottom: 10px;
+}
+.fix-bar .detail-box .item-box .head + p {
+    font-weight: 700;
+}
+.fix-bar .detail-box .item-box .price {
+    color: #d44d44;
+}
+
 .fix-bar .checkout-box {
     width: 330px;
     height: 39px;
-    background-color: #069;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+
+.fix-bar .checkout-box .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #d44d44;
+    margin-left: 10px;
+}
+.fix-bar .checkout-box .payment-blue-btn .btn {
+    color: #fff;
+    background-color: #369;
+    margin-left: 10px;
+    width: 122px;
+}
+
 /* 添加新地址 */
 .new-address {
     width: 306px;

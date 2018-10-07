@@ -5,174 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
+        .demo--label{margin:20px 20px 0 0;display:inline-block}
+        
+        .demo--radio{display:none}
+        
+        .demo--radioInput{background-color:#fff;border:2px solid rgba(0,0,0,0.15);border-radius:100%;display:inline-block;height:36px;margin-right:10px;margin-top:-1px;vertical-align:middle;width:36px;line-height:1}
+        
+        .demo--radio:checked + .demo--radioInput:after{
+            background-color:#00A1E9;
+            border-radius:100%;
+            content:"";
+            display:inline-block;
+            height:26px;
+            margin-left:5px;
+            margin-top:5px;
+            width:26px}
+        
+        
+        .demo--radio:checked + .demo--radioInput{
+            border:2px solid #00A1E9;
+        }
+        
+        </style>
 </head>
 <body>
-    <div class="form-group">
-        <div class="col-sm-2 text-center">省</div>
-        <div class="col-sm-2">
-            <select class="form-control" name="Province" id="Province">
-                <option value="">请选择 </option>
-            </select>
-        </div>
-        <div class="col-sm-2 text-center">市</div>
-        <div class="col-sm-2">
-            <select class="form-control"  name="City" id="City">
-                <option value="">请选择 </option>
-            </select>
-        </div>
-        <div class="col-sm-2 text-center">县/区</div>
-        <div class="col-sm-2">
-            <select class="form-control" name="Village" id="Village">
-                <option value="">请选择 </option>
-            </select>
-        </div>
-    </div>
-
-    <script>
+    <label class="demo--label">
     
-$(function(){
-    ProvinceBind();
-    $("#Province").change(function(){
-        CityBind();
-        VillageBind();
-    })
-    $("#City").change(function(){
-        VillageBind();
-    })
-})
+        <input class="demo--radio" type="radio" name="demo-radio">
+    
+        <span class="demo--radioInput"></span>先生
+    
+    </label>
+    
+    <label class="demo--label">
+    
+        <input class="demo--radio" type="radio" name="demo-radio">
+    
+        <span class="demo--radioInput"></span>女士
+    
+    </label>
+    
 
-    function ProvinceBind(){
-        $("#Province").html("");
-        var str="<option> 请选择 </option>";
-        var provice = [
-            {areaId:'1', areaName: '北京市' },
-            {areaId:'2', areaName: '天津市' },
-            {areaId:'3', areaName: '山西省' },
-        ]
-
-        $.each(provice,function(i,item){
-            str+="<option value="+item.areaId+">"+item.areaName+"</option>"
-        })
-
-        $("#Province").append(str);
-    }
-
-    function CityBind(){
-
-        $("#City").html("");
-        var options=$("#Province option:selected");
-        var province=options.val();
-        if(province==""){
-            return;
-        }
-        var str="<option> 请选择 </option>";
-        var city = [
-            {id:'1', city: [
-                {areaId:'1-1', areaName: '市辖区' },
-                {areaId:'1-2', areaName: '县' }
-            ] },
-            {id:'2', city: [
-                {areaId:'2-1', areaName: '市辖区' },
-                {areaId:'2-2', areaName: '县' }
-            ] },
-            {id:'3', city: [
-                {areaId:'3-1', areaName: '太原市' },
-                {areaId:'3-2', areaName: '大同市' },
-                {areaId:'3-3', areaName: '晋城市' },
-                {areaId:'3-4', areaName: '运城市' },
-                {areaId:'3-5', areaName: '忻州市' },
-            ] },
-        ];
-        for(var item of city){
-            if(item.id == province){
-                $.each(item.city,function(i,item){
-                    str+="<option value="+item.areaId+">"+item.areaName+"</option>";
-                })
-            }
-        }
-        $("#City").append(str);
-    }
-
-    function VillageBind(){
-       
-    $("#Village").html("");
-
-    var options=$("#City option:selected");
-
-    var city=options.val();
-    if(city==""){
-        return;
-    }
-    var str="<option> 请选择 </option>";
-
-    var village = [
-        {id:'1-1', city: [
-            {areaId:'1', areaName: '海淀区' },
-            {areaId:'2', areaName: '朝阳区' },
-            {areaId:'3', areaName: '昌平区' },
-            {areaId:'4', areaName: '西城区' },
-            {areaId:'5', areaName: '顺义区' }
-        ] },
-        {id:'1-2', city: [
-            {areaId:'1', areaName: '密云县' },
-            {areaId:'2', areaName: '延庆县' },
-            {areaId:'3', areaName: '其他' }
-        ] },
-        {id:'2-1', city: [
-            {areaId:'1', areaName: '河东区' },
-            {areaId:'2', areaName: '河西区' },
-            {areaId:'3', areaName: '南开区' }
-        ] },
-        {id:'2-2', city: [
-            {areaId:'1', areaName: '宁河县' },
-            {areaId:'2', areaName: '静海县' },
-            {areaId:'3', areaName: '蓟县' },
-            {areaId:'4', areaName: '其他' }
-        ] },
-        {id:'3-1', city: [
-            {areaId:'1', areaName: '古交市' },
-            {areaId:'2', areaName: '晋源区' },
-            {areaId:'3', areaName: '小店区' }
-        ] },
-        {id:'3-2', city: [
-            {areaId:'1', areaName: '城区' },
-            {areaId:'2', areaName: '矿区' },
-            {areaId:'3', areaName: '南郊区' }
-        ] },
-        {id:'3-3', city: [
-            {areaId:'1', areaName: '城区' },
-            {areaId:'2', areaName: '高平市' },
-            {areaId:'3', areaName: '沁水县' }
-        ] },
-        {id:'3-4', city: [
-            {areaId:'1', areaName: '夏县' },
-            {areaId:'2', areaName: '平陆县' },
-            {areaId:'3', areaName: '盐湖区' }
-        ] },
-        {id:'3-5', city: [
-            {areaId:'1', areaName: '保德县' },
-            {areaId:'2', areaName: '河曲县' },
-            {areaId:'3', areaName: '静乐县' }
-        ] }
-    ];
-
-    $.each(village,function(i,item){
-        if(item.id === city) {
-            $.each(item.city,function(i,item){
-                str+="<option value="+item.areaId+">"+item.areaName+"</option>";
-            })
-        }
-    })
-    $("#Village").append(str);
-}
-
-    </script>
+        
+        
 </body>
 </html>
