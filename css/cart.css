@@ -3,6 +3,7 @@ main {
 }
 main .container {
     padding: 30px 0 25px;
+    user-select: none;
 }
 .container .title {
     height: 61px;
@@ -16,14 +17,15 @@ main .container {
     line-height: 60px;
 }
 main .cart-box{
-    height: 591px;
     background-color: #fff;
     border: 1px solid #dcdcdc;
     border-radius: 8px;
 }
 .cart-box .no-goods {
+    /* height: 591px; */
     text-align: center;
-    padding-top: 50px;
+    padding: 50px 0 137px;
+    display: none;
 }
 
 .cart-box .no-goods h3 {
@@ -44,6 +46,179 @@ main .cart-box{
 .cart-box .no-goods a.buy-now:hover {
     background-image: linear-gradient(180deg,#f5f5f5,#eee);
 }
+
+/* 购物车 商品样式 */
+.cart-box .fa {
+    cursor: pointer;
+    vertical-align: middle;
+}
+.cart-box .box-inner .subtitle {
+    height: 39px;
+    background-color: #eee;
+    line-height: 39px;
+    padding-left:  30px;
+    display: flex;
+    font-size: 12px;
+}
+.cart-box .box-inner ul li:first-child {
+    flex: 1;
+}
+.cart-box .box-inner ul li:not(:first-child){
+    width: 137px;
+    text-align: center;
+}
+.cart-box .box-inner .purchased-goods {
+    padding-left:  30px;
+    height: 110px;
+    display: flex;
+    line-height: 110px;
+    user-select: none;
+}
+.cart-box .purchased-goods li:first-child {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+.cart-box .purchased-goods li:first-child .fa.fa-check-circle {
+    width: 15px;
+    height: 15px;
+}
+.purchased-goods li:first-child .fa-check-circle::before, 
+.purchased-goods li:first-child input[type="checkbox"]:checked ~ label .fa-check-circle::before {
+    top: -6px;
+}
+
+.cart-box .purchased-goods li:first-child img {
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 5px;
+}
+.cart-box .purchased-goods li:first-child .goods-info {
+    line-height: normal;
+    margin-left: 20px;
+}
+.cart-box .purchased-goods li:first-child .goods-info .gift-name {
+    color: #d44d44;
+}
+.cart-box .purchased-goods li:first-child .goods-info .gift-info {
+    padding-top: 10px;
+    color: #999;
+    font-size: 12px;
+}
+.cart-box .purchased-goods li:not(:first-child){
+    font-weight: 700;
+}
+.cart-box .box-inner .purchased-goods .fa
+ {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #b2b2b2;
+    border-radius: 50%;
+    /* text-align: center; */
+    line-height: 1.5;
+    color: #979797;
+    /* vertical-align: middle; */
+}
+.purchased-goods .fa:hover {
+    background-color: rgba(0,0,0,.15);
+}
+
+.purchased-goods .count-modify .current-goods-count{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    border: 0;    
+}
+/* .purchased-goods .count-modify .fa.fa-3x::before {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #b2b2b2;
+    color: #fbfbfb;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.15);
+    text-align: center;
+
+} */
+
+/* 购物车---商品结算栏 */
+.cart-box .cart-bottom {
+    height: 81px;
+    background: linear-gradient(#fff, #ececec);
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #d9d9d9;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 -1px 1px 0 #ececec;
+    align-items: center;
+    padding: 0 30px;
+}
+.cart-bottom .cart-bar-operation .select-btn {
+    height: 15px;
+    padding-right: 10px;
+    border-right: 1px solid #e1e1e1;
+    margin-right: 7px;
+}
+.delete-select {
+    cursor: pointer;
+    color: #bbb;
+}
+.cart-bottom .shipping .detail-box {
+    height: 39px;
+    display: flex;
+    color: #7d7d7d;
+}
+.shipping .detail-box .item-box {
+    padding: 0 30px;
+    border-left: 1px solid #ccc;
+}
+.shipping .detail-box .item-box.count {
+    padding-left: 0;
+    border-left: none;
+}
+.shipping .detail-box .item-box .head {
+    margin-bottom: 10px;
+}
+.shipping .detail-box .item-box .head + p {
+    font-weight: 700;
+}
+.shipping .detail-box .item-box .head span {
+    color: #d44d44;
+}
+
+.shipping .payment-blue-btn .btn {
+    color: #fff;
+    background-color: #369;
+    margin-left: 10px;
+    width: 122px;
+}
+/* 全选⚪效果 ---start */
+.select-btn {
+    margin-right: 30px;
+}
+.select-btn.radio input[type="checkbox"] {
+    left: -8px;
+}
+.select-btn  .fa-check-circle::before,
+.select-btn input[type="checkbox"]:checked ~ label .fa-check-circle::before {
+    color: #369;
+    border-color: #369;
+    top: -3px;
+    left: -1px;
+    font-size: 17px;
+}
+.select-btn  .fa-check-circle::before{
+    transition: all .1s linear;
+    border-color: transparent;
+    color: transparent;
+}
+.radio .fa-check-circle {
+    left: -6px;
+}
+
+/*  全选⚪效果 ---end */
+
+
 /* 商品推荐 */
 main .recommend {
     height: 977px;
@@ -137,4 +312,53 @@ main .recommend {
 }
 .recommend-items .item:hover .checkinfo {
     display: inline-block;
+}
+
+/* 删除模态窗 */
+#confirm-modal .modal-content {
+    width: 306px;
+    height: 192px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+#confirm-modal .modal-content .topbar {
+    height: 48px;
+    line-height: 48px;
+    border-radius: 0.3em 0.3em 0 0 ;
+    background: linear-gradient(#fbfbfb,#ececec);
+    font-size: 18px;
+    font-weight: 700;
+    color: #646464;
+    border-bottom: 1px solid #e6e6e6;
+}
+#confirm-modal .modal-content .content {
+    font-size: 15px;
+    color: #666;
+    flex: 1;
+    line-height: 6;
+}
+#confirm-modal .modal-content .subbar {
+    height: 48px;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #ececec;
+    box-shadow: 0 -1px 0 #fafafa;
+    background-image: linear-gradient(#fbfbfb, #ececec);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+#confirm-modal .modal-content .subbar button {
+    font-size: 12px;
+    width: 140px;
+    height: 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background-color: #fbfbfb;
+}
+#confirm-modal .modal-content .subbar .confirm {
+    background-color: #069;
+    color: #fff;
 }

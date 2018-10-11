@@ -1,4 +1,6 @@
 
+
+
 /*主体样式*/
 main .container {
     padding: 25px 0 60px;
@@ -100,7 +102,6 @@ main .container .home-box .category {
     font-size: 18px;
     color: #d44d44;
     margin-top: 20px;
-    /* display: none; */
 }
 .home-box .category .item .checkinfo {
     margin-top: 20px;
@@ -149,12 +150,23 @@ main .remen.home-box .story-title {
 }
 main .remen.home-box .story-title .arrow .fa {
     margin-left: 10px;
+    cursor: pointer;
+    color: #fbfbfb;
+    border-radius: 50%;
+    background-color: #8b8b8b;
 }
+main .remen.home-box .story-title .arrow .fa.disable-arrow {
+    background-color: #d4d4d4;
+}
+
 main .remen.home-box .category {
     flex-wrap: nowrap;
     width: 200%;
+    transition: all 2s linear;
+    /* transform: translateX(-1218px); */
 }
-main .remen .category .item{
+
+main .remen.home-box .category .item{
     width: 25%;
     height: 429px;
 }

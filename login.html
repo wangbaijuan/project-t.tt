@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/login.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
     <main>
@@ -23,7 +20,8 @@
         <form class="login">
            <div class="username">
                <span class="icon"></span>
-               <input type="text" class="uname " placeholder="用户名/邮箱"/>
+               <input type="text" class="uname " placeholder="手机号/邮箱"/>
+               <span class="exp d-none">手机号或邮箱格式错误</span>
             </div> 
             <div class="password">
                 <span class="icon"></span>
@@ -43,7 +41,7 @@
                     <a class="p-1 text-muted forget-password " href="#">忘记密码?</a>
                 </div>
             </div>
-            <button class="button-login">登陆</button>
+            <button id="login" class="button-login">登陆</button>
         </form>
         <div class="other-account">
             <div class="socail-account">
@@ -68,5 +66,10 @@
             京ICP备14041702号-1-京ICP备140622号京公网安备11010502025474
         </p>
     </footer>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

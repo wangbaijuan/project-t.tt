@@ -102,6 +102,90 @@
                     <h3>您的购物车中还没有商品</h3>
                     <a href="#" class="btn buy-now">现在选购</a>
                 </div>
+                
+                <div class="box-inner">
+                    <ul class="subtitle">
+                        <li>商品信息</li>
+                        <li>单价</li>
+                        <li>数量</li>
+                        <li>小计</li>    
+                        <li>操作</li>    
+                    </ul>
+                    <ul id="1"class="purchased-goods">
+                        <li>
+                            <div class="select-btn radio">
+                                <input type="checkbox">
+                                <label>
+                                    <em class="fa fa-check-circle"></em>
+                                </label>
+                            </div>
+                            <img src="img/res/1.png" alt="">
+                            <div class="goods-info">
+                                <p>坚果 Pro 2S（碳黑色（细红线版），4G + 64GB）</p>
+                            </div>
+                        </li>
+                        <li>￥ 1798.00</li>
+                        <li class="count-modify"> 
+                            <span class="fa fa-minus" ></span> 
+                          <!--  <input type="text" value="1" readonly> -->
+                            <span class="current-goods-count">1</span>
+                            <span class="fa fa-plus" ></span> </li>
+                        <li>￥  <span>  1798.00</span></li>
+                        <li><span class="fa fa-close" data-toggle="modal" data-target="#confirm-modal"></span></li>
+                    </ul>
+                    <ul id="2"class="purchased-goods">
+                        <li>
+                            <div class="select-btn radio">
+                                <input type="checkbox">
+                                <label>
+                                    <em class="fa fa-check-circle"></em>
+                                </label>
+                            </div>
+                            <img src="img/res/2.png" alt="">
+                            <div class="goods-info">
+                                <p class="gift-name"> 坚果 Pro 2S TPU 软胶透明保护套(透明)</p>
+                               <p class="gift-info">优惠活动：购坚果 Pro 2S 赠软胶透明保护套</p>
+                            </div>
+                        </li>
+                        <li>￥ 29.00</li>
+                        <li class="count-modify">  
+                            <span  class="fa fa-minus" ></span>
+                            <!-- <input type="text" value="1" class="current-goods-count" readonly> -->
+                            <span class="current-goods-count">1</span>
+                            <span  class="fa fa-plus" ></span> 
+                        </li>
+                        <li >￥ <span> 29.00</span></li>
+                        <li> <span class="fa fa-close"  data-toggle="modal" data-target="#confirm-modal"></span> </li>
+                    </ul>
+                </div>
+                <div class="cart-bottom">
+                    <div class="cart-bar-operation">
+                        <div class="select-btn radio">
+                            <input type="checkbox">
+                            <label>
+                                <em class="fa fa-check-circle"></em>
+                                全选
+                            </label>
+                        </div>
+                        <span class="delete-select">删除选中商品</span>
+                    </div>
+                    <div class="shipping d-flex">
+                        <div class="detail-box">
+                            <div class="item-box count">
+                                <p class="head">已选择 <span class="selected-count">0</span> 件商品 </p>
+                                <p class="foot">共计 <span class="sum">2</span> 件商品</p>
+                            </div>
+                            <div class="item-box">
+                                <p class="head">应付总额：¥ <span class="price"> 0.00</span></p>
+                                <p class="foot">应付总额不含运费</p>
+                            </div>
+                        </div>
+                        <div class="payment-blue-btn">
+                            <a href="index.html" class="btn"> 现在结算 </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="recommend">
                 <div class="title">相关推荐</div>
@@ -288,9 +372,25 @@
         </div>
         
     </footer>
+    <div class="modal fade" id="confirm-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="topbar">提示</div>
+                <div class="content">
+                    您确认删除该商品吗？
+                </div>
+                <div class="subbar">
+                    <button class="btn p-0 cancel"  data-dismiss="modal">取消</button>
+                    <button class="btn p-0 confirm" data-dismiss="modal">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/cart.js"></script>
+
 </body>
 </html>

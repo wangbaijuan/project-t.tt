@@ -23,7 +23,7 @@
                     <a class="nav-link" title="在线商城" href="#">在线商城</a>
                 </li>
                 <li class="nav-item ml-4">
-                    <a class="nav-link" title="坚果Pro 2S" href="./product_detail.html">坚果Pro 2S</a>
+                    <a class="nav-link" title="坚果Pro 2S" href="./product_detail.html" target="_blank">坚果Pro 2S</a>
                 </li>
                 <li class="nav-item ml-4">
                     <a class="nav-link" title="坚果R1" href="./product_detail.html"> 坚果R1 </a>
@@ -49,7 +49,7 @@
             </ul>
             <ul class="navbar-nav mr-4">
                 <li id="nav-user" class="nav-item nav-user">
-                    <a class="nav-link user" href="#">个人中心</a>
+                    <a class="nav-link user" href="login.html">个人中心</a>
                     <div class="nav-user-list">
                         <div class="list">
                             <div class="nav-user-avatar">
@@ -83,7 +83,7 @@
                     </div>
                 </li>
                 <li id="nav-cart" class="nav-item ml-3 nav-cart">
-                    <a class="nav-link cart" href="#">购物车</a>
+                    <a class="nav-link cart" href="cart.html" target="_blank">购物车</a>
                     <div class="nav-cart-wrapper">
                         <div class="nav-cart-page">
                             <img src="img/index/images/cart-empty-sm.png" alt="">
@@ -96,43 +96,44 @@
         </nav>
         <nav class="nav-sub navbar navbar-expand-sm navbar-light ">
             <div class="container">
-                    <ul class="navbar-nav d-flex  mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link pr-0" href="#">首页</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pr-0" href="#">手机</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pr-0" href="#">“足迹”系列</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pr-0" href="#">官方配件</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pr-0" href="#">空气净化类</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pr-0" href="#">品牌周边</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pr-0" href="#">第三方商品</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pr-0" href="#">全部</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pr-0" href="#">服务</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pr-0" href="#">企业团购</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline">
-                        <input class="form-control" type="text" placeholder="" aria-label="Search">
-                    </form>
-            </nav>
-        </div>   
+                <ul class="navbar-nav d-flex  mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link pr-0" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-0" href="#">手机</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-0" href="#">“足迹”系列</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-0" href="#">官方配件</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-0" href="#">空气净化类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-0" href="#">品牌周边</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-0" href="#">第三方商品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-0" href="#">全部</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-0" href="#">服务</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-0" href="#">企业团购</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <span class="fa fa-search"></span>
+                    <input class="form-control" type="text" placeholder="请输入搜索的商品" aria-label="Search">
+                </form>
+            </div>   
+        </nav>
             
     </header>
     <!--主体-->
@@ -179,7 +180,7 @@
                 <div class="story-title">
                    <p>热门商品</p> 
                    <div class="arrow">
-                       <span class="fa fa-chevron-circle-left"></span>
+                       <span class="fa fa-chevron-circle-left  disable-arrow"></span>
                        <span class="fa fa-chevron-circle-right"></span>
                    </div>
                 </div>
@@ -737,8 +738,6 @@
                     <li class="item"><a href="#"><img src="img/index/advertise/advertise8.png" alt=""></a></li>
                 </ul>
             </div>
-            <!-- two-锤子应用 -->
-            <!-- three- 论坛精选 -->
         </div>
     </main>
     <!--底部-->
@@ -819,5 +818,6 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
